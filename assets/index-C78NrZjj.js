@@ -9211,7 +9211,7 @@ function b0() {
 }
 var _0 = b0(),
   F = fu();
-const F0 = "/assets/weddingsong-DqLsY-0C.mp3";
+const F0 = "/assets/weddingsong-DqLsY-0C.mpeg";
 function z0() {
   const n = F.useRef(null);
   return (
@@ -16764,6 +16764,15 @@ function y2() {
         transition: { duration: 0.6, ease: "easeOut" },
       },
     };
+
+  // Function to handle clicking the swipe down button
+  const handleScrollDown = () => {
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
+
   return m.jsxs("section", {
     ref: n,
     className:
@@ -16963,14 +16972,14 @@ function y2() {
               m.jsx(E.p, {
                 variants: d,
                 className:
-                  " text-[13px] md:text-2xl text-black tracking-wide font-semibold font-['Playfair_Display']",
+                  " text-[12px] md:text-2xl text-black tracking-wide font-semibold font-['Playfair_Display']",
                 children: "G.D/O Smt. Vijay Laxmi & Shri Vijay Singh Solanki",
               }),
               m.jsx(E.p, {
                 variants: d,
                 className:
-                  " text-[13px] md:text-2xl text-black tracking-wide font-semibold font-['Playfair_Display']",
-                children: "D/o Dr.(Mrs) Ajay & Dr. Ajay Solanki",
+                  " text-[12px] md:text-2xl text-black tracking-wide font-semibold font-['Playfair_Display']",
+                children: "D/o Dr.(Mrs) Ajay Kushwaha & Dr. Ajay Singh Solanki",
               }),
               m.jsx(E.p, {
                 variants: d,
@@ -17041,6 +17050,36 @@ function y2() {
             ],
           }),
         ],
+      }),
+      m.jsx(E.button, {
+        onClick: handleScrollDown,
+        className:
+          "absolute bottom-6 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center justify-center cursor-pointer pointer-events-auto bg-transparent border-none outline-none",
+        animate: { y: [0, 8, 0] },
+        transition: { duration: 1.5, repeat: 1 / 0, ease: "easeInOut" },
+        children: m.jsxs("div", {
+          className: "flex flex-col items-center gap-1",
+          children: [
+            m.jsx("span", {
+              className:
+                "text-xs font-bold tracking-widest font-['Cormorant'] uppercase",
+              style: { color: "#eadbc7", fontWeight: "800" },
+              children: "Swipe UP",
+            }),
+            m.jsx("svg", {
+              className: "w-5 h-5 text-white",
+              fill: "none",
+              stroke: "currentColor",
+              strokeWidth: "2.5",
+              viewBox: "0 0 24 24",
+              children: m.jsx("path", {
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                d: "M19.5 8.25l-7.5 7.5-7.5-7.5",
+              }),
+            }),
+          ],
+        }),
       }),
     ],
   });
@@ -17120,7 +17159,8 @@ function v2() {
   return m.jsx("section", {
     ref: n,
     className:
-      "min-h-dvh py-12 px-6 md:px-16 flex flex-col items-center bg-[#FAF7EE]",
+      "min-h-dvh py-12 px-6 md:px-16 flex flex-col items-center bg-[#2A1A12]",
+    style: { backgroundColor: "#2A1A12" },
     children: m.jsxs("div", {
       className:
         "max-w-6xl w-full flex flex-col md:flex-row items-center gap-10",
@@ -17214,15 +17254,11 @@ function v2() {
                     "text-[#B79B40] font-['Cormorant'] md:mb-2 md:text-xl",
                   children: "Mark Your Calendar",
                 }),
-                m.jsx("p", {
-                  style: { fontFamily: "Great Vibes" },
-                  className: "text-4xl  text-[#B79B40]",
-                  children: "Wedding Festivities",
-                }),
               ],
             }),
           ],
         }),
+
         m.jsx("div", {
           className: "w-full md:w-1/2 flex justify-center",
           children: m.jsx(E.img, {
@@ -17284,11 +17320,34 @@ function v2() {
     }),
   });
 }
+// function x2() {
+//   const containerRef = F.useRef(null);
+
+//   // Replace this link with wherever you want the user to go when they click your image
+//   const clickDestinationUrl = "";
+
+//   return m.jsx("section", {
+//     ref: containerRef,
+//     className:
+//       "py-20 px-6 md:px-16 bg-gradient-to-br from-pink-50 via-cream-50 to-amber-50 flex justify-center items-center",
+//     children: m.jsx("div", {
+//       className:
+//         "w-full max-w-4xl bg-[#d8c2c5] p-4 md:p-8 rounded-2xl shadow-md",
+//       children: m.jsx("img", {
+//         src: "assets/tanmay_rsvp.png", // This is your image variable
+//         alt: "Display Content",
+//         className:
+//           "w-full h-auto rounded-xl max-h-[600px] object-cover cursor-pointer block hover:opacity-95 transition-opacity duration-200",
+//       }),
+//     }),
+//   });
+// }
+
 function x2() {
   const containerRef = F.useRef(null);
 
   // Replace this link with wherever you want the user to go when they click your image
-  const clickDestinationUrl = "https://google.com";
+  const clickDestinationUrl = "";
 
   return m.jsx("section", {
     ref: containerRef,
@@ -17296,15 +17355,29 @@ function x2() {
       "py-20 px-6 md:px-16 bg-gradient-to-br from-pink-50 via-cream-50 to-amber-50 flex justify-center items-center",
     children: m.jsx("div", {
       className:
-        "w-full max-w-4xl bg-[#d8c2c5] p-4 md:p-8 rounded-2xl shadow-md",
-      children: m.jsx("img", {
-        src: "assets/tanmay_rsvp.png", // This is your image variable
-        alt: "Display Content",
-        className:
-          "w-full h-auto rounded-xl max-h-[600px] object-cover cursor-pointer block hover:opacity-95 transition-opacity duration-200",
-        onClick: () => {
-          window.open(clickDestinationUrl, "_blank", "noopener,noreferrer");
-        },
+        "w-full max-w-4xl bg-[#d8c2c5] p-4 md:p-8 rounded-2xl shadow-md flex flex-col gap-6",
+      children: m.jsxs(m.Fragment, {
+        children: [
+          /* Text Box Container */
+          m.jsx("div", {
+            className:
+              "w-full bg-[#ccb0b4] p-8 rounded-xl text-center flex flex-col justify-center items-center",
+            children: m.jsx("p", {
+              className:
+                "text-[#786533] text-2xl md:text-4xl font-medium leading-relaxed tracking-wide selection:bg-transparent",
+              style: { fontFamily: "Great Vibes" },
+              children: "Your Gracious Presence is Enthusiastically Awaited",
+            }),
+          }),
+
+          /* Image Element */
+          m.jsx("img", {
+            src: "assets/tanmay_rsvp.png", // This is your image variable
+            alt: "Display Content",
+            className:
+              "w-full h-auto rounded-xl max-h-[600px] object-cover cursor-pointer block hover:opacity-95 transition-opacity duration-200",
+          }),
+        ],
       }),
     }),
   });
@@ -17614,7 +17687,18 @@ function M2() {
               margin: "20px auto 1.5rem auto",
               display: "block",
             },
-            children: "Taj Jai Mahal palace, Jaipur",
+            children: [
+              m.jsx("span", {
+                style: { fontWeight: "normal" },
+                children: "Taj Jai Mahal Palace",
+              }),
+              // This adds the line break between the two elements
+              m.jsx("br", {}),
+              m.jsx("span", {
+                style: { fontWeight: "normal" },
+                children: "Jacob Road, Civil Lines, Jaipur",
+              }), // Explicitly set to normal font weight
+            ],
           }),
           m.jsx(E.div, {
             initial: { opacity: 0, y: 20 },
@@ -17910,14 +17994,16 @@ function q2() {
           //     scale: { duration: 3, repeat: 1 / 0 },
           //   },
           // }),
-          m.jsx(E.img, {
-            src: AL2,
-            className: "absolute bottom-10 right-5 w-30 z-120",
+          m.jsx(E.span, {
+            // Changed text color to text-white and added drop-shadow-sm
+            className:
+              "absolute bottom-10 right-5 z-120 cursor-pointer font-['Cormorant'] text-lg font-bold hover:underline drop-shadow-sm",
+            style: { color: "#eadbc7", fontWeight: "800" },
             initial: { y: 120, opacity: 0 },
-            animate: a ? { y: 0, opacity: 1, scale: [1, 1.08, 1] } : {},
+            animate: a ? { y: 0, opacity: 1, scale: [1, 1.05, 1] } : {},
             transition: {
               y: { duration: 1, delay: 0.5 },
-              scale: { duration: 3.5, repeat: 1 / 0 },
+              scale: { duration: 3.5, repeat: Infinity },
             },
             onClick: () => {
               window.open(
@@ -17926,6 +18012,7 @@ function q2() {
                 "noopener,noreferrer",
               );
             },
+            children: "Get Directions",
           }),
           m.jsx(E.img, {
             src: hi,
@@ -18298,7 +18385,7 @@ function F2() {
     ],
   });
 }
-const z2 = "/assets/barat.jpeg",
+const z2 = "/assets/barat.png",
   Pp = "",
   ut = "",
   Ys = "",
@@ -18517,8 +18604,12 @@ function B2() {
               m.jsx(E.h2, {
                 animate: a ? { y: 0, opacity: 1 } : { y: -50, opacity: 0 },
                 transition: { duration: 0.8 },
-                className: "text-5xl mb-4 pt-32 ",
-                style: { fontFamily: "Great Vibes", color: "white" },
+                className: "text-5xl mb-4",
+                style: {
+                  fontFamily: "Great Vibes",
+                  color: "voilet",
+                  marginTop: "180px",
+                },
                 children: "Sangeet",
               }),
               // m.jsx(E.p, {
@@ -18532,7 +18623,7 @@ function B2() {
               m.jsxs(E.div, {
                 animate: a ? { y: 0, opacity: 1 } : { y: -40, opacity: 0 },
                 transition: { delay: 0.3 },
-                className: "space-y-1 text-white font-['Cormorant']",
+                className: "space-y-1 text-voilet font-['Cormorant']",
                 children: [
                   m.jsx("p", { className: "text-lg", children: "" }),
                   m.jsxs("p", {
@@ -18541,7 +18632,7 @@ function B2() {
                       "FRI, JULY",
                       " ",
                       m.jsx("span", {
-                        className: "text-white text-2xl font-['Great Vibes']",
+                        className: "text-voilet text-2xl font-['Great Vibes']",
                         children: "3",
                       }),
                       " ",
@@ -18554,11 +18645,18 @@ function B2() {
                   }),
                   m.jsx("p", {
                     className: "text-lg mb-3",
-                    children: "The Banquet",
-                  }),
-                  m.jsx("p", {
-                    className: "text-lg mb-3",
-                    children: "Taj Jai Mahal Palace",
+                    children: [
+                      m.jsx("span", {
+                        style: { fontWeight: "bold" },
+                        children: "The Banquet",
+                      }),
+                      // This adds the line break between the two elements
+                      m.jsx("br", {}),
+                      m.jsx("span", {
+                        style: { fontWeight: "normal" },
+                        children: "Taj Jai Mahal Palace",
+                      }), // Explicitly set to normal font weight
+                    ],
                   }),
                 ],
               }),
@@ -18922,14 +19020,20 @@ function rk() {
                     className: "text-base",
                     children: "10:00 AM onwards",
                   }),
-
-                  m.jsx("p", {
-                    className: "text-base font-semibold mb-2 text-[#f97316]",
-                    children: "The Banquet",
-                  }),
                   m.jsx("p", {
                     className: "text-base mb-2 text-[#775A00]",
-                    children: "Taj Jai Mahal Palace",
+                    children: [
+                      m.jsx("span", {
+                        style: { fontWeight: "bold", color: "#f97316" },
+                        children: "The Banquet",
+                      }),
+                      // This adds the line break between the two elements
+                      m.jsx("br", {}),
+                      m.jsx("span", {
+                        style: { fontWeight: "normal" },
+                        children: "Taj Jai Mahal Palace",
+                      }), // Explicitly set to normal font weight
+                    ],
                   }),
                 ],
               }),
@@ -19070,7 +19174,7 @@ function K2() {
                 style: {
                   fontFamily: "Great Vibes",
                   color: "#B13401",
-                  marginTop: "200px",
+                  marginTop: "150px",
                 },
                 children: "Wedding Rituals",
               }),
@@ -19230,7 +19334,7 @@ function K2() {
                 style: {
                   fontFamily: "Great Vibes",
                   color: "#B13401",
-                  marginTop: "200px",
+                  marginTop: "150px",
                 },
                 children: "Wedding Rituals",
               }),
